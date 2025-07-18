@@ -5,11 +5,11 @@ This is a simple REST API for a chatbot system, built with **AdonisJS v6** and *
 
 ## Features
 
-  * [cite\_start]Send a question to the chatbot. [cite: 19]
-  * [cite\_start]Save user questions and bot responses to the database. [cite: 21, 23]
-  * [cite\_start]Retrieve a list of all conversations. [cite: 28]
-  * [cite\_start]Retrieve all messages from a specific conversation. [cite: 30]
-  * [cite\_start]Delete a specific conversation. [cite: 48]
+  * Send a question to the chatbot.
+  * Save user questions and bot responses to the database.
+  * Retrieve a list of all conversations.
+  * Retrieve all messages from a specific conversation.
+  * Delete a specific conversation.
 
 ## Prerequisites
 
@@ -77,7 +77,7 @@ Here is the documentation for the available API endpoints.
 
 ### 1\. Send a Question
 
-[cite\_start]Receives a question, forwards it to an external chatbot API, and stores both the question and the answer. [cite: 19, 21, 23]
+Receives a question, forwards it to an external chatbot API, and stores both the question and the answer.
 
   * **Method**: `POST`
   * **Endpoint**: `/questions`
@@ -98,7 +98,7 @@ Here is the documentation for the available API endpoints.
 
 ### 2\. Get All Conversations
 
-[cite\_start]Retrieves a list of all conversations, including their associated messages. [cite: 28]
+Retrieves a list of all conversations, including their associated messages.
 
   * **Method**: `GET`
   * **Endpoint**: `/conversations`
@@ -135,7 +135,7 @@ Here is the documentation for the available API endpoints.
 
 ### 3\. Get a Specific Conversation
 
-[cite\_start]Retrieves a single conversation and its messages by its `id`. [cite: 30]
+Retrieves a single conversation and its messages by its `id`.
 
   * **Method**: `GET`
   * **Endpoint**: `/conversations/:id`
@@ -152,7 +152,7 @@ Here is the documentation for the available API endpoints.
 
 ### 4\. Delete a Conversation
 
-[cite\_start]Deletes a specific conversation and all of its associated messages by its `id`. [cite: 48]
+Deletes a specific conversation and all of its associated messages by its `id`.
 
   * **Method**: `DELETE`
   * **Endpoint**: `/conversations/:id`
