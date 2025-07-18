@@ -90,7 +90,13 @@ Receives a question, forwards it to an external chatbot API, and stores both the
   * **Success Response** (200 OK):
     ```json
     {
-      "answer": "Hello! I am a bot. How can I assist you today?"
+        "answer": [
+            {
+                "text": "Belum nemu info yang dicari?\n      Tenang, Maja.AI selalu siap bantu temukan info atau topik yang kamu butuhkan lebih mudah dan cepat.\n\n      Biar nyaman akses fiturnya, pastikan Sobat Majadigi sudah punya akun, ya!",
+                "category": "greeting",
+                "suggest_links": []
+            }
+        ]
     }
     ```
 
@@ -105,29 +111,56 @@ Retrieves a list of all conversations, including their associated messages.
   * **Success Response** (200 OK):
     ```json
     [
-        {
-            "id": 1,
-            "sessionId": "a1b2c3d4-e5f6-7890-1234-567890abcdef",
-            "lastMessage": "I am doing great, thanks!",
-            "createdAt": "2025-07-12T04:30:00.000Z",
-            "updatedAt": "2025-07-12T04:30:05.000Z",
-            "messages": [
-                {
-                    "id": 1,
-                    "conversationId": 1,
-                    "senderType": "user",
-                    "message": "Hello, how are you?",
-                    "createdAt": "2025-07-12T04:30:00.000Z"
-                },
-                {
-                    "id": 2,
-                    "conversationId": 1,
-                    "senderType": "bot",
-                    "message": "I am doing great, thanks!",
-                    "createdAt": "2025-07-12T04:30:05.000Z"
-                }
-            ]
-        }
+      {
+          "id": 2,
+          "sessionId": "509676f2-5584-4875-a2d9-9354c6f16b82",
+          "lastMessage": "{\"{\\\"text\\\":\\\"Hai, Sobat Majadigi!\\\\n      Selamat datang di Maja.AI, asisten pintar yang bantu Kamu temukan info layanan publik lebih cepat.\\\\n      Mulai ngobrol yuk…\\\\n\\\\n      Ketik pertanyaan atau topik yang ingin Kamu tahu, Maja.AI siap bantu jawab!\\\",\\\"category\\\":\\\"greeting\\\",\\\"suggest_links\\\":[]}\"}",
+          "createdAt": "2025-07-12T04:23:05.476+00:00",
+          "updatedAt": "2025-07-12T04:23:06.331+00:00",
+          "messages": [
+              {
+                  "id": 3,
+                  "conversationId": 2,
+                  "senderType": "user",
+                  "message": "Apa itu Majagidi",
+                  "createdAt": "2025-07-12T04:23:05.492+00:00",
+                  "updatedAt": "2025-07-12T04:23:05.493+00:00"
+              },
+              {
+                  "id": 4,
+                  "conversationId": 2,
+                  "senderType": "bot",
+                  "message": "{\"{\\\"text\\\":\\\"Hai, Sobat Majadigi!\\\\n      Selamat datang di Maja.AI, asisten pintar yang bantu Kamu temukan info layanan publik lebih cepat.\\\\n      Mulai ngobrol yuk…\\\\n\\\\n      Ketik pertanyaan atau topik yang ingin Kamu tahu, Maja.AI siap bantu jawab!\\\",\\\"category\\\":\\\"greeting\\\",\\\"suggest_links\\\":[]}\"}",
+                  "createdAt": "2025-07-12T04:23:06.326+00:00",
+                  "updatedAt": "2025-07-12T04:23:06.326+00:00"
+              }
+          ]
+      },
+      {
+          "id": 5,
+          "sessionId": "a52588de-2232-4cfa-ac1f-c66946bb12dc",
+          "lastMessage": "{\"{\\\"text\\\":\\\"Terima kasih sudah berinteraksi dengan Maja.AI, asisten virtual yang siap nunjukin info layanan publik dan hal menarik seputar Jawa Timur—semuanya lebih cepat dan praktis.\\\\n      Aplikasi Majadigi juga tersedia dalam versi mobile, lho!\\\\n\\\\n      Yuk, download Majadigi di ponselmu dan nikmati kemudahan akses layanan publik dalam satu aplikasi.\\\\n\\\\n      Majadigi\\\\n      Simple. Cerdas. Terhubung sepenuhnya.\\\",\\\"category\\\":\\\"greeting\\\",\\\"suggest_links\\\":[]}\"}",
+          "createdAt": "2025-07-18T08:12:11.742+00:00",
+          "updatedAt": "2025-07-18T08:12:15.704+00:00",
+          "messages": [
+              {
+                  "id": 9,
+                  "conversationId": 5,
+                  "senderType": "user",
+                  "message": "Hello, how are you?",
+                  "createdAt": "2025-07-18T08:12:13.738+00:00",
+                  "updatedAt": "2025-07-18T08:12:13.739+00:00"
+              },
+              {
+                  "id": 10,
+                  "conversationId": 5,
+                  "senderType": "bot",
+                  "message": "{\"{\\\"text\\\":\\\"Terima kasih sudah berinteraksi dengan Maja.AI, asisten virtual yang siap nunjukin info layanan publik dan hal menarik seputar Jawa Timur—semuanya lebih cepat dan praktis.\\\\n      Aplikasi Majadigi juga tersedia dalam versi mobile, lho!\\\\n\\\\n      Yuk, download Majadigi di ponselmu dan nikmati kemudahan akses layanan publik dalam satu aplikasi.\\\\n\\\\n      Majadigi\\\\n      Simple. Cerdas. Terhubung sepenuhnya.\\\",\\\"category\\\":\\\"greeting\\\",\\\"suggest_links\\\":[]}\"}",
+                  "createdAt": "2025-07-18T08:12:15.641+00:00",
+                  "updatedAt": "2025-07-18T08:12:15.641+00:00"
+              }
+          ]
+      }
     ]
     ```
 
